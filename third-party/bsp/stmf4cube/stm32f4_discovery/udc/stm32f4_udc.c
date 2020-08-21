@@ -69,5 +69,6 @@ static struct stm32f4_udc stm32f4_udc = {
 static int stm32f4_udc_init(void) {
 	usb_gadget_register_udc(&stm32f4_udc.udc);
 
+	stm32f4_udc.udc.udc_start(&stm32f4_udc.udc);
 	return 0;
 }
